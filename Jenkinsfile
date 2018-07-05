@@ -4,10 +4,7 @@ pipeline {
     stage('Bonjour') {
       steps {
         echo 'Hello World'
-      }
-      steps {
-        echo 'Waving At You'
-      }
+      }      
     }
     stage('La Deuxiemme Salut') {
       steps {
