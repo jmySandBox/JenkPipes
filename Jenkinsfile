@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Saying Hello') {
+    stage('Bonjour') {
       steps {
         bat(script: 'echo Hello World', returnStatus: true)
       }
