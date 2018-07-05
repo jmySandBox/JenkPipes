@@ -13,13 +13,12 @@ pipeline {
             bat 'echo GoodBye Friend'
           }
         }
+        stage('en Francaise') {
+          steps {
+            echo 'I am Your Master - Thou Shalt Obey Me'
+          }
+        }
       }
     }
-  }
-  environment {
-    stages = ''
-    stage = 'Hello World'
-    steps = ''
-    echo = 'Saying Hello'
   }
 }
