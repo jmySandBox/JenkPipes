@@ -6,7 +6,7 @@ pipeline {
         bat(script: 'echo Hello World', returnStatus: true)
       }
     }
-    stage('deuxiemmeSalut') {
+    stage('La Deuxiemme Salut') {
       steps {
         bat 'echo Secondary Hello'
       }
