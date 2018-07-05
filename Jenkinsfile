@@ -3,17 +3,20 @@ pipeline {
   stages {
     stage('Bonjour') {
       steps {
-        bat(script: 'echo Hello World', returnStatus: true)
+        echo 'Hello World'
+      }
+      steps {
+        echo 'Waving At You'
       }
     }
     stage('La Deuxiemme Salut') {
       steps {
-        bat 'echo Secondary Hello'
+        echo 'Secondary Hello'
       }
     }
     stage('les trois') {
       steps {
-        bat 'echo le trifecta'
+        echo 'le trifecta'
       }
     }
     stage('le fin') {
