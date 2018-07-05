@@ -20,5 +20,15 @@ pipeline {
         }
       }
     }
+    stage('Adding Second Hello') {
+      steps {
+        bat 'echo Secondary Hello'
+      }
+    }
+    stage('les trois') {
+      steps {
+        bat 'echo le trifecta'
+      }
+    }
   }
 }
