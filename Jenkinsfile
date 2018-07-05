@@ -21,5 +21,10 @@ pipeline {
         echo 'I am Your Master - Thou Shalt Obey Me'
       }
     }
+     stage('qui ma dire') {
+      steps {
+        echo 'You changed me'
+      }
+    }
   }
 }
