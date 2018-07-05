@@ -2,8 +2,17 @@ pipeline {
   agent none
   stages {
     stage('Saying Hello') {
-      steps {
-        bat(script: 'echo "Hello World"', returnStatus: true)
+      parallel {
+        stage('Saying Hello') {
+          steps {
+            bat(script: 'echo Hello World', returnStatus: true)
+          }
+        }
+        stage('Say Bye') {
+          steps {
+            bat 'echo GoodBye Friend'
+          }
+        }
       }
     }
   }
