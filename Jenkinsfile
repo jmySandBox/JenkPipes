@@ -16,11 +16,7 @@ pipeline {
         echo 'le trifecta'
       }
     }
-     stage('Checkpoint') {
-      steps {
-        checkpoint 'Checkpoint'
-      }
-    }
+    
     stage('Testing') {
         parallel {
           stage('Java 8') {
