@@ -19,20 +19,12 @@ pipeline {
     
     stage('Testing') {
         parallel {
-          stage('Java 8') {
-            agent { label 'jdk9' }
+          stage('Java 8') {           
             steps {
-                sh 'mvn -v'
+                sh 'java -version'
               }
           }
-          stage('Java 9') {
-            agent { label 'jdk8' }
-            steps {    
-                sh 'mvn -v'
             }
-          }
-        }
-      }
     stage('le fin') {
       steps {
         echo 'I am Your Master - Thou Shalt Obey Me'
