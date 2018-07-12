@@ -46,7 +46,6 @@ pipeline {
   }
   environment {
     MY_NAME = 'Diane_1'
-    TEST_USER = credentials('test-user')
   }
   post {
     aborted {
