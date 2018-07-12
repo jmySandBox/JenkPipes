@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Bonjour') {
       steps {
-        echo 'Hello World'
+        echo "Hello ${MY_NAME}"
       }      
     }
     stage('La Deuxiemme') {
@@ -22,17 +22,13 @@ pipeline {
           stage('Java 8') {
             agent { label 'jdk9' }
             steps {
-              container('maven8') {
                 sh 'mvn -v'
               }
-            }
           }
           stage('Java 9') {
             agent { label 'jdk8' }
-            steps {
-              container('maven9') {
+            steps {    
                 sh 'mvn -v'
-              }
             }
           }
         }
@@ -47,6 +43,16 @@ pipeline {
         echo 'You changed me'
       }
     }
-    
+  }
+  environment {
+    MY_NAME = 'Diane_1'
+    TEST_USER = credentials('test-user')
+  }
+  post {
+    aborted {
+      echo 'Why didn\'t you push my button?'
+
+    }
+
   }
 }
